@@ -1,4 +1,5 @@
 import { Text, View } from 'react-native';
+import { tw } from '~/utils/tw';
 
 export const EditScreenInfo = ({ path }: { path: string }) => {
   const title = 'Open up the code for this screen:';
@@ -13,7 +14,8 @@ export const EditScreenInfo = ({ path }: { path: string }) => {
           className={styles.codeHighlightContainer + styles.homeScreenFilename + styles.bgColor}>
           <Text className={styles.bgColor}>{path}</Text>
         </View>
-        <Text className="ltr:text-green-500 rtl:text-red-500">{description}</Text>
+        <Text className="ltr:text-green-500 rtl:text-red-500 ltr:text-right rtl:text-left">{description}</Text>
+        <Text className={tw`ltr:text-green-500 rtl:text-red-500 ltr:text-right rtl:text-left`}>{`solved ${description}`}</Text>
       </View>
     </View>
   );

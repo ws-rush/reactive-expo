@@ -19,9 +19,18 @@ interface LocaleInterface {
   set: (value: string) => void;
   toggleLocales: () => void;
   loadLocale(): Promise<string>;
+  setRTL(option: boolean): void
 }
 
 const locale: LocaleInterface = {
+  async setRTL(isRTL: boolean) {
+    if (Platform.OS === 'web') {
+      globalThis.window.document.documentElement.dir = isRTL ? 'rtl' : 'ltr'
+    } else {
+      await I18nManager.allowRTL(isRTL);
+      await I18nManager.forceRTL(isRTL);
+    }
+  },
   get availableLocales() {
     return Object.keys(this.localesData);
   },
@@ -46,13 +55,8 @@ const locale: LocaleInterface = {
     i18n.activate(value);
 
     // reload app
-    if (direction === 'rtl') {
-      await I18nManager.allowRTL(true);
-      await I18nManager.forceRTL(true);
-    } else {
-      await I18nManager.allowRTL(false);
-      await I18nManager.forceRTL(false);
-    }
+    if (direction === 'rtl') await this.setRTL(true)
+    else await this.setRTL(false)
 
     if ((await locale.loadLocale()) !== value) {
       // set app default lang done from app settings

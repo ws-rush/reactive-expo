@@ -26,7 +26,7 @@ Mocking up mobile app with <b>Reactive</b><br>
 
 - 🔗️ [Deep Linking](https://docs.expo.dev/guides/deep-linking/), out-of-box [[1]](#1)
 
-<!-- - 🏷️ [Manage meta tsgs](httpsDijkstra, E. W. (1968)://react.dev/blog/2024/04/25/react-19#support-for-metadata-tags) -->
+- 🏷️ [Manage meta tsgs](https://docs.expo.dev/router/reference/static-rendering/#meta-tags)
 
 <!-- - 📦 [Components auto importing](./app/components) -->
 
@@ -34,13 +34,16 @@ Mocking up mobile app with <b>Reactive</b><br>
 
 - 🎨 [nativewind](https://github.com/antfu/unocss) - style your components in React Native with tailwindcss
 
-<!-- - dark light mode [1] -->
+- 🌗️ [Dark/Light mode](https://github.com/antfu/unocss/tree/main/packages/preset-icons) ready implementation in nativewind
+
 
 <!-- - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons) -->
 
 <!-- - 🔤 [Remote fonts](https://github.com/unocss/unocss/tree/main/packages/preset-web-fonts) (for self hosted fonts use `FontSource` [install](https://fontsource.org/fonts/red-hat-text/install)) -->
 
-- 🌍 [I18n ready](https://lingui.dev/)
+- 🌍 [I18n ready](https://lingui.dev/) with RTL support [[1]](#1) [[2]](#2)
+
+<!-- splash screen and icons and fonts -->
 
 <!-- rtl support with out expo go -->
 
@@ -70,6 +73,9 @@ Mocking up mobile app with <b>Reactive</b><br>
 
 <a id="1">[1]</a> 
 This functionality is only available in Expo development build, it does not work in Expo Go.
+
+<a id="2">[2]</a> 
+currently styling with `rtl:` and `ltr:` does not work in `nativewind` review [issue](https://github.com/nativewind/nativewind/issues/959). as workaround use classes in `tw` tag for any `rtl:` or `ltr:` like ```<Text className={tw`ltr:text-right rtl:text-left`}>Description</Text>
 
 <br>
 

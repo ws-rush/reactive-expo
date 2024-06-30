@@ -1,21 +1,33 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Appearance, ColorSchemeName } from 'react-native';
+import { Appearance, ColorSchemeName, Platform } from 'react-native';
 
 export type Mode = 'system' | ColorSchemeName;
 
 const mode = {
+  setColorScheme(_mode: ColorSchemeName) {
+    if (Platform.OS === 'web') {
+      switch (_mode) {
+        case 'dark':
+          globalThis.window?.document.documentElement.classList.add('dark')
+          break
+        default:
+          globalThis.window?.document.documentElement.classList.remove('dark')
+      }
+    }
+    else Appearance.setColorScheme(_mode)
+  },
   set(_mode: Mode) {
     switch (_mode) {
       case 'system':
-        Appearance.setColorScheme(null);
+        this.setColorScheme(null);
         AsyncStorage.removeItem('mode');
         break;
       case 'light':
-        Appearance.setColorScheme('light');
+        this.setColorScheme('light');
         AsyncStorage.setItem('mode', 'light');
         break;
       case 'dark':
-        Appearance.setColorScheme('dark');
+        this.setColorScheme('dark');
         AsyncStorage.setItem('mode', 'dark');
         break;
     }
