@@ -5,8 +5,13 @@
     "version": "1.0.0",
     "scheme": "reactive-expo",
     "plugins": [
-      "expo-router",
       "expo-localization",
+      [
+        "expo-router",
+        {
+          "origin": "https://reactive-expo.netlify.app",
+        }
+      ],
       [
         "expo-dev-launcher",
         {
