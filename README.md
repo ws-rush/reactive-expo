@@ -39,13 +39,9 @@ Mocking up mobile app with <b>Reactive</b><br>
 
 <!-- - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons) -->
 
-<!-- - 🔤 [Remote fonts](https://github.com/unocss/unocss/tree/main/packages/preset-web-fonts) (for self hosted fonts use `FontSource` [install](https://fontsource.org/fonts/red-hat-text/install)) -->
+- 🔤 [Custom fonts](https://docs.expo.dev/develop/user-interface/fonts)
 
 - 🌍 [I18n ready](https://lingui.dev/) with RTL support [[1]](#1) [[2]](#2)
-
-<!-- splash screen and icons and fonts -->
-
-<!-- rtl support with out expo go -->
 
 <!-- - 📥 [APIs auto importing](https://github.com/unjs/unimport) -->
 

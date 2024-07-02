@@ -15,7 +15,7 @@ export const EditScreenInfo = ({ path }: { path: string }) => {
           <Text className={styles.bgColor}>{path}</Text>
         </View>
         <Text className="ltr:text-green-500 rtl:text-red-500 ltr:text-right rtl:text-left">{description}</Text>
-        <Text className={tw`ltr:text-green-500 rtl:text-red-500 ltr:text-right rtl:text-left`}>{`solved ${description}`}</Text>
+        <Text className={tw`ltr:text-green-500 rtl:text-red-500 ltr:text-right rtl:text-left font-exo`}>{`solved ${description}`}</Text>
       </View>
     </View>
   );

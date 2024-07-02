@@ -1,0 +1,5 @@
+https://www.figma.com/community/file/1155362909441341285
+
+- export from template
+- then add paths in `app.json` platforms keys
+- we can add "splash" key for every platform different than global splash
