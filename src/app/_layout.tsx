@@ -1,13 +1,13 @@
 import '~/global.css';
-import { Stack, Slot } from 'expo-router';
+import { Slot } from 'expo-router';
 import { ThemeProvider, DarkTheme, DefaultTheme } from '@react-navigation/native';
 import { useColorScheme } from 'nativewind';
 import { I18nProvider } from '@lingui/react';
 import i18n from '~/globals/i18n';
 import mode from '~/globals/mode';
 // import { Text } from 'react-native'
-import { useFonts, Exo_400Regular, Exo_700Bold, Exo_900Black } from '@expo-google-fonts/exo'
-import { SplashScreen } from 'expo-router'
+import { useFonts, Exo_400Regular, Exo_700Bold, Exo_900Black } from '@expo-google-fonts/exo';
+import { SplashScreen, Tabs } from 'expo-router';
 import { useEffect } from 'react';
 
 // Prevent the splash screen from auto-hiding, needed only with call of SplashScreen.hideAsync() down below
@@ -25,18 +25,18 @@ export default function Layout() {
   const [fontsLoaded, fontError] = useFonts({
     Exo_400Regular,
     Exo_700Bold,
-    Exo_900Black
-  })
+    Exo_900Black,
+  });
 
   useEffect(() => {
     if (fontsLoaded || fontError) {
       // hide the splash screen after fonts are loaded (or an error was returned) and the UI is ready
-      setTimeout(() => SplashScreen.hideAsync(), 2000)
+      setTimeout(() => SplashScreen.hideAsync(), 2000);
     }
-  }, [fontsLoaded])
+  }, [fontsLoaded]);
 
   // Prevent rendering until fonts are loaded or an error was returned
-  if (!fontsLoaded && !fontError) return null
+  if (!fontsLoaded && !fontError) return null;
 
   return (
     <I18nProvider
@@ -44,7 +44,7 @@ export default function Layout() {
       // defaultComponent={Text}
     >
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack />
+        <Slot />
       </ThemeProvider>
     </I18nProvider>
   );

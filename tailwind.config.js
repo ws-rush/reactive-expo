@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         exo: ['Exo', 'sans-serif'],
-      }
+      },
     },
   },
   plugins: [],

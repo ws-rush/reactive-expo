@@ -9,7 +9,7 @@
       [
         "expo-router",
         {
-          "origin": "https://reactive-expo.netlify.app",
+          "origin": "https://reactive-expo.netlify.app"
         }
       ],
       [

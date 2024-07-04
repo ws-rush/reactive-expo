@@ -8,13 +8,12 @@ const mode = {
     if (Platform.OS === 'web') {
       switch (_mode) {
         case 'dark':
-          globalThis.window?.document.documentElement.classList.add('dark')
-          break
+          globalThis.window?.document.documentElement.classList.add('dark');
+          break;
         default:
-          globalThis.window?.document.documentElement.classList.remove('dark')
+          globalThis.window?.document.documentElement.classList.remove('dark');
       }
-    }
-    else Appearance.setColorScheme(_mode)
+    } else Appearance.setColorScheme(_mode);
   },
   set(_mode: Mode) {
     switch (_mode) {

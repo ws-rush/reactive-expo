@@ -14,8 +14,11 @@ export const EditScreenInfo = ({ path }: { path: string }) => {
           className={styles.codeHighlightContainer + styles.homeScreenFilename + styles.bgColor}>
           <Text className={styles.bgColor}>{path}</Text>
         </View>
-        <Text className="ltr:text-green-500 rtl:text-red-500 ltr:text-right rtl:text-left">{description}</Text>
-        <Text className={tw`ltr:text-green-500 rtl:text-red-500 ltr:text-right rtl:text-left font-exo`}>{`solved ${description}`}</Text>
+        <Text className="ltr:text-right ltr:text-green-500 rtl:text-left rtl:text-red-500">
+          {description}
+        </Text>
+        <Text
+          className={tw`font-exo ltr:text-right ltr:text-green-500 rtl:text-left rtl:text-red-500`}>{`solved ${description}`}</Text>
       </View>
     </View>
   );
