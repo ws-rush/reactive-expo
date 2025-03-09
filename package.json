@@ -10,7 +10,7 @@
     "build:dev": "eas build --profile development",
     "build:preview": "eas build --profile preview",
     "build:prod": "eas build --profile production",
-    "prebuild": "expo prebuild",
+    "prebuild": "expo prebuild --clean",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
     "format:check": "prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",

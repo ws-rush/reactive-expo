@@ -16,6 +16,10 @@ Mocking up mobile app with <b>Reactive</b><br>
 
 > linguijs have issue with `t` macro, use `<Trans>` micro as much as possible instead, until [issue](https://github.com/lingui/js-lingui/issues/1933) solverd
 
+>I still prefer devlopment with local builds, not expo GO, so when download template do: 
+>* `pnpm prebuild` first time you download template or your project
+>* `pnpm start` to start develpment server
+
 ## Features
 
 - ⚡️ [React 18](https://react.dev/), [Metro](https://metrobundler.dev), [pnpm](https://pnpm.io/)

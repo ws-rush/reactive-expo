@@ -4,6 +4,7 @@
     "slug": "reactive-expo",
     "version": "1.0.0",
     "scheme": "reactive-expo",
+    "newArchEnabled": true,
     "plugins": [
       "expo-localization",
       [
@@ -16,17 +17,6 @@
         "expo-dev-launcher",
         {
           "launchMode": "most-recent"
-        }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "ios": {
-            "newArchEnabled": true
-          },
-          "android": {
-            "newArchEnabled": true
-          }
         }
       ],
       "expo-font"
@@ -52,7 +42,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "reactive.expo"
     },
     "android": {
       "package": "reactive.expo",
