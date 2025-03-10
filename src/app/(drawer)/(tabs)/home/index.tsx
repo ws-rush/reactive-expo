@@ -1,7 +1,7 @@
 import { Stack, Link } from 'expo-router';
 import { useColorScheme } from 'nativewind';
-import { Alert, Appearance, I18nManager, Text } from 'react-native';
-import { Trans, t } from '@lingui/macro';
+import { I18nManager, Text } from 'react-native';
+import { Trans } from '@lingui/react/macro';
 import { Button } from '~/components/Button';
 import { Container } from '~/components/Container';
 import { ScreenContent } from '~/components/ScreenContent';
