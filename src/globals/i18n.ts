@@ -1,6 +1,6 @@
-import { I18n, i18n } from '@lingui/core';
+import { I18n, i18n, Messages } from '@lingui/core';
 import { getLocales } from 'expo-localization';
-import { I18nManager, Platform, NativeModules } from 'react-native';
+import { I18nManager, Platform } from 'react-native';
 import { reloadAsync } from 'expo-updates';
 import { messages as arMessages } from '~/locales/ar.js';
 import { messages as enMessages } from '~/locales/en.js';
@@ -10,7 +10,7 @@ export type Locale = {
   direction: 'rtl' | 'ltr';
   label: string;
   locale: string;
-  messages: Object;
+  messages: Messages;
 };
 
 interface LocaleInterface {

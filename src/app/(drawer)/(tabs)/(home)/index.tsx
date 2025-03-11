@@ -1,4 +1,4 @@
-import { Stack, Link } from 'expo-router';
+import { Link } from 'expo-router';
 import { useColorScheme } from 'nativewind';
 import { I18nManager, Text } from 'react-native';
 import { Trans } from '@lingui/react/macro';
@@ -11,7 +11,7 @@ import mode from '~/globals/mode';
 
 export default function Home() {
   const [state, setState] = useState(0);
-  const { colorScheme, setColorScheme } = useColorScheme();
+  const { colorScheme } = useColorScheme();
 
   return (
     <>

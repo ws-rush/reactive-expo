@@ -5,9 +5,8 @@ import { useColorScheme } from 'nativewind';
 import { I18nProvider } from '@lingui/react';
 import i18n from '~/globals/i18n';
 import mode from '~/globals/mode';
-// import { Text } from 'react-native'
 import { useFonts, Exo_400Regular, Exo_700Bold, Exo_900Black } from '@expo-google-fonts/exo';
-import { SplashScreen, Tabs } from 'expo-router';
+import { SplashScreen } from 'expo-router';
 import { useEffect } from 'react';
 
 // Prevent the splash screen from auto-hiding, needed only with call of SplashScreen.hideAsync() down below
@@ -33,7 +32,7 @@ export default function Layout() {
       // hide the splash screen after fonts are loaded (or an error was returned) and the UI is ready
       setTimeout(() => SplashScreen.hideAsync(), 2000);
     }
-  }, [fontsLoaded]);
+  }, [fontsLoaded, fontError]);
 
   // Prevent rendering until fonts are loaded or an error was returned
   if (!fontsLoaded && !fontError) return null;

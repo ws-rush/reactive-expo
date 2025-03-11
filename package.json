@@ -59,15 +59,12 @@
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "babel-plugin-macros": "^3.1.0",
-    "eslint": "^9.22.0",
-    "eslint-config-universe": "^12.1.0",
+    "eslint": "^8.57.1",
+    "eslint-config-expo": "~8.0.1",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.3.3"
-  },
-  "eslintConfig": {
-    "extends": "universe/native"
   },
   "expo": {
     "install": {
