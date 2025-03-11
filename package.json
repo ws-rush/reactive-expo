@@ -1,7 +1,7 @@
 {
   "name": "reactive-expo",
   "version": "1.0.0",
-  "main": "expo-router/entry",
+  "main": "root.ts",
   "scripts": {
     "start": "expo start -c",
     "ios": "expo run:ios",
