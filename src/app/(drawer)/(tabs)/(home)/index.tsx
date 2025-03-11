@@ -15,7 +15,6 @@ export default function Home() {
 
   return (
     <>
-      <Stack.Screen options={{ title: i18n._('Home') }} />
       <Container>
         <ScreenContent path="app/index.tsx" title={<Trans>Home</Trans>} />
         {I18nManager.isRTL ? (
@@ -23,7 +22,7 @@ export default function Home() {
         ) : (
           <Text className="text-black dark:text-white">it is ltr</Text>
         )}
-        <Link href={{ pathname: '/(tabs)/home/details', params: { name: 'Dan' } }} asChild>
+        <Link href={{ pathname: './details', params: { name: 'Dan' } }} asChild>
           <Button title={<Trans>Show Details</Trans>} />
         </Link>
         <Text className="text-black dark:text-white"> color: {colorScheme}</Text>

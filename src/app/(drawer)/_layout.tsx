@@ -2,9 +2,9 @@ import { Drawer } from 'expo-router/drawer';
 
 export default function Layout() {
   return (
-    <Drawer>
-      <Drawer.Screen name="(tabs)" options={{ headerShown: false, drawerLabel: 'Home' }} />
-      <Drawer.Screen name="payments" />
-    </Drawer>
+    <Drawer screenOptions={({ route }) => {
+      if (route.name === '(tabs)') return { headerShown: false, drawerLabel: 'Home' }
+      return {}
+    }} />
   );
 }
