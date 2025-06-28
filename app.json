@@ -19,7 +19,9 @@
           "launchMode": "most-recent"
         }
       ],
-      "expo-font"
+      "expo-font",
+      "expo-build-properties",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,
@@ -38,7 +40,9 @@
         "backgroundColor": "#000000"
       }
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "reactive.expo"

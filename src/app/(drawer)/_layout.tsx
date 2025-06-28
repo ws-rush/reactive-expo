@@ -1,12 +1,12 @@
 import { Drawer } from 'expo-router/drawer';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function Layout() {
   return (
-    <Drawer
-      screenOptions={({ route }) => {
-        if (route.name === '(tabs)') return { headerShown: false, drawerLabel: 'Home' };
-        return {};
-      }}
-    />
+    <GestureHandlerRootView style={{ flex: 1 }}>
+    <Drawer>
+      <Drawer.Screen name="(tabs)" options={{ headerShown: false, drawerLabel: 'Home' }} />
+    </Drawer>
+      </GestureHandlerRootView>
   );
 }

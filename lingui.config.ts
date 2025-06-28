@@ -4,7 +4,7 @@ export default defineConfig({
   catalogs: [
     {
       include: ['src'],
-      path: '<rootDir>/src/locales/{locale}',
+      path: '<rootDir>/src/locales/{locale}.js',
     },
   ],
   fallbackLocales: {

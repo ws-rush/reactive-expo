@@ -22,7 +22,7 @@ export default function Home() {
         ) : (
           <Text className="text-black dark:text-white">it is ltr</Text>
         )}
-        <Link href={{ pathname: './details', params: { name: 'Dan' } }} asChild>
+        <Link href='./details' asChild relativeToDirectory>
           <Button title={<Trans>Show Details</Trans>} />
         </Link>
         <Text className="text-black dark:text-white"> color: {colorScheme}</Text>

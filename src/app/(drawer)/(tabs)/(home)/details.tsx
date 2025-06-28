@@ -1,12 +1,13 @@
-import { useLocalSearchParams } from 'expo-router';
+// import { useLocalSearchParams } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Container } from '~/components/Container';
-import { ScreenContent } from '~/components/ScreenContent';
+// import { Container } from '~/components/Container';
+// import { ScreenContent } from '~/components/ScreenContent';
 import Head from 'expo-router/head';
+import { Text } from 'react-native';
 
 export default function Details() {
-  const { name } = useLocalSearchParams();
+  // const { name } = useLocalSearchParams();
 
   return (
     <>
@@ -14,9 +15,10 @@ export default function Details() {
         <title>Details</title>
       </Head>
       <SafeAreaView>
-        <Container>
+        <Text>test</Text>
+        {/* <Container>
           <ScreenContent path="screens/details.tsx" title={`Showing details for user ${name}`} />
-        </Container>
+        </Container> */}
       </SafeAreaView>
     </>
   );
